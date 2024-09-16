@@ -1,0 +1,19 @@
+<form class="w-full flex justify-center">
+  <mat-form-field appearance="outline" [style.width.px]="400" class="m-4">
+    <input
+      type="search"
+      matInput
+      placeholder="Enter the search value..."
+      [formControl]="searchControl"
+    />
+    <mat-icon matSuffix>search</mat-icon>
+
+    @if (loader) {
+    <div
+      class="w-full left-[15px] top-[18px] absolute flex items-center justify-center"
+    >
+      <mat-spinner [diameter]="20" />
+    </div>
+    }
+  </mat-form-field>
+</form>

@@ -1,0 +1,21 @@
+// Highlight hovered row in table
+.mat-mdc-row:hover {
+  background-color: rgb(191 219 254);
+}
+
+// Table columns' width
+.mat-column-number {
+  width: 100px;
+}
+
+.mat-column-weight {
+  width: 200px;
+}
+
+.mat-column-symbol {
+  width: 100px;
+}
+
+.mat-column-actions {
+  width: 100px;
+}

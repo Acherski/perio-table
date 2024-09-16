@@ -22,7 +22,12 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": { 
+      "@backend/table-api": ["./src/app/backend/table-api"], 
+      "@features/views": ["./src/app/features/views"], 
+      "@shared": ["./src/app/shared"], 
+    } 
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

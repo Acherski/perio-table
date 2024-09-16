@@ -1,0 +1,25 @@
+<mat-form-field appearance="outline" class="my-2" [style.width.px]="300">
+  <mat-label>{{ label }}</mat-label>
+
+  <!-- Input for text (string) value -->
+  @if (controlType === 'text') {
+  <input [formControl]="control" matInput />
+  }
+
+  <!-- Input for decimal numbers -->
+  @if (controlType === 'decimal') {
+  <input numberOrDecimal [formControl]="control" matInput />
+  }
+
+  <!-- Input for natural numbers -->
+  @if (controlType === 'number') {
+  <input numbersOnly [formControl]="control" matInput />
+  }
+
+  <!-- Validation text -->
+  <mat-hint class="text-[#ba1a1a] drop-shadow-md">
+    @if (control.touched && !control.value) {
+    <span>Field is required.</span>
+    }
+  </mat-hint>
+</mat-form-field>

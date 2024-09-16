@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+// Snackbar message colors
+.mat-mdc-snack-bar-action {
+  color: rgb(239 246 255) !important;
+  font-weight: 700 !important;
+}
+.mat-mdc-snack-bar-container {
+  &.success-snackbar {
+    --mdc-snackbar-container-color: #16a34a;
+    --mat-mdc-snack-bar-button-color: #eff6ff;
+    --mdc-snackbar-supporting-text-color: #eff6ff;
+  }
+
+  &.error-snackbar {
+    --mdc-snackbar-container-color: #991b1b;
+    --mat-mdc-snack-bar-button-color: #eff6ff;
+    --mdc-snackbar-supporting-text-color: #eff6ff;
+  }
+
+  &.info-snackbar {
+    --mdc-snackbar-container-color: #1e40af;
+    --mat-mdc-snack-bar-button-color: #eff6ff;
+    --mdc-snackbar-supporting-text-color: #eff6ff;
+  }
+}
+
+
+// Hide unnecessary border line in inputs
+.mdc-notched-outline__notch {
+  border-right: none;
+}
+
+
+// Input border radius
+.mdc-notched-outline__leading {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.mdc-notched-outline__trailing {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.mat-mdc-dialog-surface {
+  border-radius: 0 !important;
+  border: 1px solid black !important;
+  padding: 0.5rem;
+  background-color: rgb(235, 244, 255) !important;
+}
+
+// Mat button border radius
+.mdc-button {
+  border-radius: 0 !important;
+}

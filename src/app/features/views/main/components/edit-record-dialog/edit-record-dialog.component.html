@@ -1,0 +1,31 @@
+<h2 mat-dialog-title class="text-center font-semibold">Edit element data</h2>
+<mat-dialog-content>
+  <form [formGroup]="formGroup" class="flex flex-col">
+    <!-- Element's number input -->
+    <common-control
+      label="Position"
+      [control]="formGroup.controls.position"
+      controlType="number"
+    />
+
+    <!-- Element's name input -->
+    <common-control label="Name" [control]="formGroup.controls.name" />
+
+    <!-- Element's weight input -->
+    <common-control
+      label="Weight"
+      [control]="formGroup.controls.weight"
+      controlType="decimal"
+    />
+
+    <!-- Element's symbol input -->
+    <common-control label="Symbol" [control]="formGroup.controls.symbol" />
+
+    <div class="flex justify-end gap-4">
+      <button mat-flat-button (click)="onSaveClick()">Save</button>
+      <button mat-stroked-button mat-dialog-close color="secondary">
+        Cancel
+      </button>
+    </div>
+  </form>
+</mat-dialog-content>

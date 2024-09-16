@@ -1,0 +1,11 @@
+<div class="flex justify-end">
+  <button
+    mat-fab
+    (click)="onRowClick()"
+    #tooltip="matTooltip"
+    matTooltip="{{ type | titlecase }} record"
+    [matTooltipPosition]="'above'"
+  >
+    <mat-icon>{{ type }}</mat-icon>
+  </button>
+</div>
